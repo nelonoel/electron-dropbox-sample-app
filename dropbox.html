@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body></body>
+<script type="text/javascript">
+	const ipc = require('electron').ipcRenderer;
+	const hash = window.location.hash;
+	const params = {};
+
+	hash.substr(1).split('&').map(function(pair){
+		const val = pair.split('=');
+		params[val[0]] = val[1];
+	});
+
+	ipc.send('AUTH_TOKEN_RECEIVED', params);
+</script>
+</html>

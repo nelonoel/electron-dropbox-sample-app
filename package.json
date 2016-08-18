@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "description": "My solid app",
   "license": "MIT",
+  "main": "main.js",
   "repository": "nelonoel/electron-dropbox-sample-app",
   "author": {
     "name": "Aaron Noel De Leon",
@@ -12,20 +13,17 @@
   },
   "scripts": {
     "test": "xo",
-    "start": "electron .",
+    "start": "electron . & node server.js & wait",
     "build": "electron-packager . --out=dist --app-version=$npm_package_version --prune --asar --overwrite --all"
   },
-  "files": [
-    "index.js",
-    "index.html",
-    "index.css"
-  ],
   "keywords": [
     "electron-app",
     "electron"
   ],
   "dependencies": {
-    "electron-debug": "^1.0.0"
+    "dropbox": "^2.1.0",
+    "electron-debug": "^1.0.0",
+    "superagent": "^2.2.0"
   },
   "devDependencies": {
     "devtron": "^1.1.0",

@@ -20,8 +20,36 @@ header {
 }
 
 header h1 {
-	font-size: 60px;
+	font-size: 32px;
 	font-weight: 100;
-	margin: 0;
+	margin: 1em auto;
 	padding: 0;
+}
+
+#authenticated {
+	display: none;
+}
+
+button,
+.button {
+	display: block;
+	margin: 0 auto;
+	cursor: pointer;
+	width: 15em;
+	border-radius: 5px;
+	background: #29A7B6;
+	color: #fff;
+	outline: none;
+	padding: 1em 1.5em;
+	text-align: center;
+	border: none;
+	text-decoration: none;
+	white-space: nowrap;
+	font-size: 18px;
+}
+
+button[disabled],
+.button[disabled] {
+	background-color: #ccc;
+	pointer-events: none;
 }

@@ -2,16 +2,26 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Electron boilerplate</title>
+		<title>Sample Dropbox Electron App</title>
 		<link rel="stylesheet" href="index.css">
 	</head>
 	<body>
 		<div class="container">
 			<header>
-				<h1>Electron boilerplate</h1>
+				<h1 id="welcome">Hello there</h1>
+				<a id="authAnchor" class="button" href="">Login via Dropbox</a>
+
+				<div id="authenticated">
+					<button id="uploadTestFile">Upload Test File</button>
+					<h2>File List</h2>
+					<div id="fileList">
+						No files found. Check your Dropbox folder at /apps/crimson-water/ to check if the list is synced.
+					</div>
+				</div>
 			</header>
 			<section class="main"></section>
 			<footer></footer>
 		</div>
 	</body>
+	<script type="text/javascript" src="./renderer.js"></script>
 </html>
