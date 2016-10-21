@@ -34,6 +34,10 @@ function createMainWindow() {
 		show: false,
 		height: 720,
 		width: 1080,
+		webPreferences: {
+			nodeIntegration: false,
+			webSecurity: false
+		}
 	});
 
 	// win.maximize();
